@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Atividade_2</string>
+    <string-array name="turno_array">
+        <item>Manhã</item>
+        <item>Tarde</item>
+        <item>Noite</item>
+    </string-array>
+</resources>
