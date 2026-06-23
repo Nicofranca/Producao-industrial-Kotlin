@@ -32,8 +32,19 @@ class MainActivity : AppCompatActivity() {
             val produzidasStr = edtProduzidas.text.toString()
             val rejeitadasStr = edtRejeitadas.text.toString()
             val turno = spnTurno.selectedItem.toString()
+
+            if (maquina.isEmpty() || produzidasStr.isEmpty() || rejeitadasStr.isEmpty()) {
+                android.widget.Toast.makeText(this, "Preencha todos os campos!", android.widget.Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             val produzidas = produzidasStr.toInt()
             val rejeitadas = rejeitadasStr.toInt()
+
+            if (produzidas <= 0) {
+                android.widget.Toast.makeText(this, "A produção deve ser maior que zero!", android.widget.Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
 
             val aprovadas = produzidas - rejeitadas
             val percentual = (rejeitadas.toDouble() * 100) / produzidas.toDouble()
@@ -58,6 +69,5 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
-
     }
 }
