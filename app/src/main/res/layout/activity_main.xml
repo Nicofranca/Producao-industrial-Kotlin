@@ -78,4 +78,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edtRejeitadas" />
 
+    <Button
+        android:id="@+id/btnGerarRelatorio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Gerar Relatorio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnTurno"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>
